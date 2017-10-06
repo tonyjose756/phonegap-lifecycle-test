@@ -15,25 +15,30 @@ function updateDisplay() {
 // device APIs are available
 //
     function onDeviceReady() {
-		alert("device ready");
-        
-		document.addEventListener("resume", onResume, false);
-		document.addEventListener("pause", onPause, false);
-		
-		launched_count++;
-		updateDisplay();
+	
+	document.addEventListener("resume", onResume, false);
+	document.addEventListener("pause", onPause, false);
+	
+	launched_count++;
+	updateDisplay();
+	    
+	alert("device ready");
     }
 
 
     function onPause() {
-		alert("pause");
-		paused_count++;
-		updateDisplay();
+	
+	paused_count++;
+	updateDisplay();
+	    
+	alert("pause");
     }
 	
 
     function onResume() {
-		alert("resume");
-		resumed_count++;
-		updateDisplay();
+		
+	resumed_count++;
+	updateDisplay();
+	    
+	alert("resume");
     }
