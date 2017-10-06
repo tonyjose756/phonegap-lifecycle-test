@@ -26,15 +26,15 @@ var launched_count = 0;
 		updateDisplay();
     }
 
-    // Handle the pause event
-    //
+
     function onPause() {
 		alert("pause");
 		paused_count++;
 		updateDisplay();
     }
 	
-	function onResume() {
+
+    function onResume() {
 		alert("resume");
 		resumed_count++;
 		updateDisplay();
