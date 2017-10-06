@@ -7,6 +7,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 		
 	
 function updateDisplay() {
+	console.log("updateDisplay");
 	$("#launched").text("Application launched: " + launched_count);
 	$("#resumed").text("Application paused: " + paused_count);
 	$("#paused").text("Application resumed: " + resumed_count);
@@ -17,6 +18,8 @@ function updateDisplay() {
 //
     function onDeviceReady() {
 	
+	 console.log("onDeviceReady");
+	    
 	document.addEventListener("resume", onResume, false);
 	document.addEventListener("pause", onPause, false);
 	
@@ -29,6 +32,8 @@ function updateDisplay() {
 
     function onPause() {
 	
+	     console.log("onPause");
+	    
 	paused_count++;
 	updateDisplay();
 	    
@@ -37,7 +42,7 @@ function updateDisplay() {
 	
 
     function onResume() {
-		
+		console.log("onResume");
 	resumed_count++;
 	updateDisplay();
 	    
